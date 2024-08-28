@@ -1,0 +1,61 @@
+@mixin ximage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// media query mixins
+@mixin smallestPhones {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin smallerPhones {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin smallPhones {
+  @media only screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+/* This query is "synced" with content-width.ts values */
+@mixin mediumPhones {
+  @media only screen and (max-width: 460px) {
+    @content;
+  }
+}
+
+/* This query is "synced" with content-width.ts values */
+@mixin largePhones {
+  @media only screen and (max-width: 660px) {
+    @content;
+  }
+}
+
+/* This query is "synced" with content-width.ts and index.ts values */
+@mixin allPhones {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-down {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+// hide scrollbar
+@mixin hideScrollbars {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

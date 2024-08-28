@@ -1,0 +1,43 @@
+@import "./mixins.scss", "./variables", "./ProgressBar.scss", "./BottomBar/BottomBar.scss", "./Global";
+
+/* San Francisco Compact Display font */
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SFCompactDisplay-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/SFCompactDisplay-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/SFCompactDisplay-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/SFCompactDisplay-Bold.woff2") format("woff2");
+}
+
+/* San Francisco Mono font */
+@font-face {
+  font-family: "SF Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/sf-mono-medium.woff2") format("woff2");
+}

@@ -1,0 +1,266 @@
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+// TEXT
+.t-center {
+  text-align: center;
+}
+
+.ellip {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.ellip2 {
+  word-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+// BORDERS
+.rounded {
+  border-radius: 1rem;
+}
+
+.rounded-sm {
+  border-radius: $small;
+}
+
+.rounded-md {
+  border-radius: $medium;
+}
+
+.rounded-lg {
+  border-radius: 1.25rem;
+}
+
+.circular {
+  border-radius: 10rem;
+}
+
+.bg-primary {
+  background-color: $gray4;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.425);
+}
+
+// BUTTONS
+button {
+  font-family: "SF Compact Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.9rem !important;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+  border-radius: $small;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  padding: 0 $small;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, border 0.2s ease-out;
+
+  background-color: $gray4;
+  cursor: pointer;
+
+  svg {
+    transition: all 0.2s;
+  }
+
+  &:active {
+    svg {
+      transform: scale(0.75);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $darkestblue;
+  }
+}
+
+.btn-active {
+  background-color: $darkestblue;
+}
+
+.btn-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-more {
+  width: 2.5rem;
+}
+
+// POSITION
+
+.abs {
+  position: absolute;
+}
+
+// OTHERS
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.separator {
+  border-top: 1px $separator solid;
+  color: transparent;
+  margin: $small 0 $small 0;
+  opacity: 0.5;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.load_disabled {
+  pointer-events: all;
+  background: $gray5 !important;
+  border-color: $gray5 !important;
+  opacity: 1;
+}
+
+#drag-img {
+  width: max-content;
+  max-width: 15rem;
+  background-color: $darkblue;
+  padding: $smaller $small;
+  border-radius: $smaller;
+  opacity: 1;
+  position: absolute;
+  left: -20rem;
+}
+
+.spinner {
+  border: solid 3px rgb(0, 0, 0);
+  border-top: solid 3px transparent;
+  border-left: solid 3px transparent;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 0.45s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card-list-scroll-x {
+  overflow: hidden;
+
+  h3 {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: baseline;
+    padding: 0 $medium;
+    margin-bottom: $medium;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($cardwidth, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-direction: row;
+    padding-bottom: 2rem;
+
+    @include hideScrollbars;
+  }
+
+  .album-card {
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
+
+.rhelp {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: $purple;
+  font-weight: 700;
+  margin: $smaller 0;
+
+  &.album {
+    color: $orange;
+  }
+
+  &.track {
+    color: $pink;
+  }
+
+  &.folder {
+    color: $teal;
+  }
+
+  &.playlist {
+    color: $green;
+  }
+}
+
+// Badges used in settings
+.badge {
+  margin-left: $small;
+  opacity: 0.75;
+  padding: 0 $smaller;
+  border-radius: $smaller;
+  font-size: 12px !important;
+}
+
+.experimental {
+  border: solid 1px $yellow;
+  color: $yellow;
+}
+
+.badge.new {
+  background-color: $blue;
+  opacity: 1;
+}

@@ -1,0 +1,22 @@
+.tabheaders {
+  display: flex;
+  align-items: center;
+  gap: $medium;
+
+  .tab {
+    height: 2rem;
+    text-transform: capitalize;
+    background-color: $gray5;
+    border: none;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0 $medium;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .activetab {
+    background-color: white;
+    color: $gray;
+  }
+}
