@@ -1,4 +1,5 @@
 onmessage = (e) => {
+  
   const { trackhash, duration, source, timestamp } = e.data;
 
   const is_dev = location.port === "5173";
